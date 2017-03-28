@@ -10,7 +10,7 @@ var slackUsersByName = new Map();
 return function(context, req, res) {
 
   var zendeskRootUrl = util.format('https://%s.zendesk.com/api/v2', context.data.zendesk_tenant);
-  var slackRootUrl = 'https://api.slack.com';
+  var slackRootUrl = 'https://api.slack.com/';
   var ticketOpenedMessage = '<%s> A support ticket (%s) has been opened for your request. We contact you through the email address associated with your Slack account as soon as possible.';
   var ticketCreatedMessage = util.format('Ticket created: <https://%s.zendesk.com/agent/tickets/%s|%s>', context.data.zendesk_tenant);
   var userErrorMessage = util.format('An error has occurred. If you would like to open a support ticket please email %s', context.data.support_email);
